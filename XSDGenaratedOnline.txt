@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="loans">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="loan"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="customerName"/>
+        <xs:element ref="loanAmount"/>
+        <xs:element ref="workType"/>
+        <xs:element ref="address"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="customerName">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:NCName">
+          <xs:attribute name="salutation" use="required" type="xs:NCName"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="loanAmount" type="xs:integer"/>
+  <xs:element name="workType" type="xs:NCName"/>
+  <xs:element name="address">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="street"/>
+        <xs:element ref="city"/>
+        <xs:element ref="state"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="street" type="xs:string"/>
+  <xs:element name="city" type="xs:NCName"/>
+  <xs:element name="state" type="xs:NCName"/>
+</xs:schema>
+
+
+Generated from http://xml.mherman.org/

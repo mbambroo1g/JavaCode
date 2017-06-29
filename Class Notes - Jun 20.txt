@@ -1,0 +1,133 @@
+@Webservlet("hello.html")
+public class MyServelt{
+	doGet(req,res){}
+}
+------
+MVC  - model view controller
+
+
+								WEb SErver (Tomcat)
+								 ___________________________________________________________
+								|	DD														|
+								|	____________		_________________					|
+								|	|	web.xml	|		|	Controller	|					|
+								|	|			|	->	|				|	->	Model		|
+		http1.1					|	|			|	<-	|	servlets----| 	->				|
+user ------------------------> 	|	|			|		|				|					|
+		/url   /\				|	|	dip		|		|				|		View		|					 
+				|				|	|___________|		|_______________|	--------		|
+				|				|											jsp,jsf, portlet|				
+				|				|________________________________________________|__________|
+				|																 |
+				|																 |
+				|	View responds back to user									 |
+				|________________________________________________________________|
+	Observer pattern:
+	
+	Servlet accepts a request and response coming from http1.1 as it enends an httpservlet.
+	CORBA - translate the requests and tranlate it into the formats of different interacting components.
+	POJO - plain old java object
+	
+	Model - helps you hit teh db, get the data etc. It is just an object.
+	
+	Portlets - richly used in google where a part of page is refreshed. They run on Ajax engine.
+	Wesites - HCi
+	Webservices - Comp to COmp interaction.
+	
+	RMI, ebXML, EDI, COM (Microsoft - does not exist - DCOM now)& CORBA.
+	W3C - everything is free.
+	
+	TCP - Wired
+	UDP - not wireed
+	
+	Webservices may have poor performance as compared to native protocols  like CORBA, RMi etc.
+	
+	XML -
+	SOAP - Any data in a format.
+	WSDL
+	UDDI
+	
+	WSDL is hosted on a UDDI server. It is a one time job to host and then it stays forever.
+	SOAP JDK1.6 onwards - no need for anything else. for jdk1.5 and old, we need an additional software called axis. 
+	Hosts soap services - axis is written by apache.
+	
+	Soap binding - RPC and DOc
+	everyhing documneted in one doc = RPC
+	DOC format - spread across various docs
+	
+	endpoint = place where the service is hosted. if nothing is defined, the package name becomes the  end point.
+	
+								
+		SOAP
+				<loan>
+					<loanId>101</loanId>
+					<creditSCore>600</creditScore>
+					<customer>
+						<customerName>Randall</customerName>
+						<address>11000 ABC way</address>
+					</customer>
+				</loan>
+								
+								
+				JSON format:
+				
+				var myvar = toJSON(loan);
+				{
+					loan:{
+							loanId:101,
+							creditSCore:666,
+							customer:{
+								customerName: "harry",
+								address: 11000 ABC way
+							}
+					}
+				}
+				
+				
+				HATEOAS - hypermedia as the engine of Application state
+				
+				All websites are developed in javaScript.
+				REstful allows to transmit anything at all. Hypermedia - anything is allowed. No rules.
+				
+				
+				URI - universal resource identifier.
+				
+				GET
+				http://fannie.com/resources/messages
+				
+				
+				GET one
+				http://fannie.com/resources/messages/101 - this will get 101
+				GET some
+				http://fannie.com/resources/messages/101/110 - this will get data from 101 to 110
+				
+				POST - Insert
+				
+				PUT - Update
+				
+				DELETE - delete
+				
+				OTHERS - Network programming
+				
+				Jackson, Hamcrest, GSOn (google JSON), - take json and giev it in form of a bean.,
+				
+				REST vs RESTful service
+				
+				Level 0 - one URI, Request body has everything. Similar to soap.
+				Level 1 - 
+				level 2
+				
+				HATEOS - Level 3 - RESTFUL service - responses have links that clients can use.
+				
+				Jersey - Fannie Mae uses Jersey.
+				
+				Variables in POM are called properties
+				
+				
+				Rest Assured is written in TESTNg and written in JAVA.
+				
+				GIVEN
+				WHEN
+				THEN
+				
+				Either we do it or rest assured does this.

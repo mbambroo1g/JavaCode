@@ -1,0 +1,80 @@
+<XMLRequest>
+<Header>
+	<userID>uname</userID>
+	<password>pwd</password>
+</Header>
+<BorrowerData>
+	<Name>Amara</Name>
+	<Address>
+		<Street>Grayson Pkwy</Street>
+		<City>Monroe</City>
+		<State>NC</State>
+		<Zip>28110</Zip>
+	</Address>
+	<SSN>123-45-6789</SSN>
+	<MonthlyIncome>40000</MonthlyIncome>
+	<CreditScore>900</CreditScore>
+</BorrowerData>
+</XMLRequest>
+
+
+DTD - 
+
++ : MinOccurs = 1, MaxOccurs = Unbounded
+* : MinOccurs = 0, maxOccurs = Unbounded
+? : MinOccurs = 0, MaxOccurs = 1
+
+hello@testing.com
+[a-z A-Z 0-9]{1-20}[@][a-zA-Z]{1-20}[.][com|co|in|org|co.us]
+
+[0-9]{5}[-][0-9]{4}
+
+XPath - w3 standard
+
+
+//*[@id="1474349731076"]/div/figure[2]/figcaption/div/div[1]
+
+
+javascript for w3 = ecma
+
+code written in browsers
+javascript is a programming language --not ---scripting language
+
+prog language gets compiled and generates a byte code/object code.
+Scripting languages are interpreted. The syntactical, semantical chceks n execution takes place 1 line at a time.
+If there is an error at line 55, 54 lines rae executedw ell...
+
+server side as well -- NO
+slow and unpredictable
+look good
+
+
+simple api for xml
+doc parser
+
+
+function -
+method
+
+
+Angular js is a framework not a library.
+This is written at teh bottom
+
+javascript is written in the header section.
+
+
+"55"==55 --> valid and true
+0== false -> valid and trure
+0===false ---> valid and results in false; This enforces data type validation as well.
+"55" ===55 -> valid n true; enforces type validation and data types are not matching.
+
+
+i/=10 is same as i=i/10;
+
+
+Array are immutable..
+
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+indexOf

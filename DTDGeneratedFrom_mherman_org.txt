@@ -1,0 +1,38 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT loans (loan)+>
+<!ATTLIST loans
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT loan (customerName,loanAmount,workType,address)>
+<!ATTLIST loan
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT customerName (#PCDATA)>
+<!ATTLIST customerName
+  xmlns CDATA #FIXED ''
+  salutation NMTOKEN #REQUIRED>
+
+<!ELEMENT loanAmount (#PCDATA)>
+<!ATTLIST loanAmount
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT workType (#PCDATA)>
+<!ATTLIST workType
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT address (street,city,state)>
+<!ATTLIST address
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT street (#PCDATA)>
+<!ATTLIST street
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT city (#PCDATA)>
+<!ATTLIST city
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT state (#PCDATA)>
+<!ATTLIST state
+  xmlns CDATA #FIXED ''>

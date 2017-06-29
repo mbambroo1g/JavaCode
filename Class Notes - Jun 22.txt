@@ -1,0 +1,56 @@
+class notes - Jun-22
+
+class MyWork{
+	public void given(){}
+	public void when(){}
+}
+
+MyWork m = new MyWork();
+m.given();
+
+Message Queuing - Demon - keep running
+
+Factory pattern
+
+pwd - 
+ls - list all
+cd ../..  - parent's paremt
+
+git config --edit
+
+yy - copy
+dd - cut
+p - paste
+
+ls -la
+list 
+
+staging area - files are kept 
+
+git add . -- Add file to staging area.
+-- all all file sto git hub
+
+git add file1.txt
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   file1.txt
+
+git commit -m 
+git commit -rm 
+
+
+
+
+Git sequence:
+git add .  --Add file to staging area
+git commit -m "comments" ---Add comments
+git status --- chcek if working tree/directory is clean
+git push origin master --push to 
+
+
+
+

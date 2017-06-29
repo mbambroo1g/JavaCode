@@ -1,0 +1,133 @@
+jsp; visual basic;all other stuff.
+
+character user interface;
+
+Client changes over a course of time, everything else remians same.
+
+xpath
+xsd
+
+
+servlests - not a part of core java. previously called J2EE, now JEE.
+CGI was the first company in the world to help someone dynamic content.
+
+Common gateway interface. Native programming language.
+
+Servlets are run in jav bytecode and runs on JVM. Platform independence.
+process is handledm by OS but threads are handled programmatically. 
+
+singleton -
+
+Thread for the servlet..
+
+
+
+class Company extends Thread{
+	private Company();
+	
+	public static Company getInstance(Company company){
+	if(company == null){
+		return new Company();
+	}
+	else{
+		return company;	
+		}
+	
+	}
+}
+
+//Company Company = new Company(); //first instance
+//Company Company = new Company(); //second instance
+
+Servlet servlet; (replace company with Servlet)
+user1 = company.getInstance(Company).start();
+
+stop is depracated, interrupt is good.
+
+-------------
+
+w3 consortium - lay standards for languages.
+http 1.0 -> stateful - make a request and remember who made the request.
+Http 1.1 - stateless - user calls, processed but the requestor is not remembered.
+
+session invaliate - 
+
+Apache tomcat - 150 concurrent threeads available.
+
+								WEb SErver (Tomcat)
+								 ___________________________________________________________
+								|	DD														|
+								|	____________				_________________			|
+								|	|	web.xml	|				|	Container	|			|
+								|	|			|				|				|			|
+		http1.1					|	|			|				|	servlets----|-----------|------------------->Every servlet has a life.For a service,
+user ------------------------> 	|	|			|				|				|			|
+		/url					|	|	dip		|				|				|			|					 a thread of a servlet is started based on the user request.
+								|	|___________|				|_______________|			|
+								|															|
+								|___________________________________________________________|
+								
+								
+								
+								Security - cannot get with GET, but only post.
+								
+								
+	GET Method:
+		http://yourwebsite.come/somebusiness?username = harry&password = peter
+	
+	POST Method:
+		http://yourwebsite.come/somebusiness
+		
+		Packet creation
+		username = harry&password=peter
+		
+		GET and PUT are services.
+		
+		server shutsdown, all servlets are destroyed.
+		
+		web.xml makes sure teh user sees an html like code.
+		Servlets can call other servlets for processing.
+		
+		Extend httpserrvlet - adapter pattrern.
+		
+		Intercae MyJob{
+			public void a();
+			public void b();
+			public void c();
+			}
+			
+			class TomcatClass implements MyJOb{
+				public void a() {TODO};
+				public void b() {TODO};
+				public void c() {TODO};
+			}
+			
+			
+			class Your Class implements MyJOb{
+			//will have to define all a,b,c  but we only want a.
+			}
+			
+			class YourClass extends TomcatClass{
+			
+			}
+			
+			
+			
+			
+				
+			FannieApp
+			
+				WEB-INF
+					web.xml (DD)//DD = deployment descriptor
+					classes
+					lib
+	.js
+	.html
+	.jsp
+	.jsf
+	
+	The projects should have the same structure.
+	
+	
+	Dispatch forward - forward to another servlet
+	Dispatch include - include information in communication to another servlet.
