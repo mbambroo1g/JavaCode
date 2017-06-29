@@ -1,0 +1,43 @@
+package com.fannie.pomtest;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+
+import com.fannie.generics.GenericMethods;
+import com.fannie.pom.FlightPagePOM;
+import com.fannie.utils.DriverFactory;
+import com.fannie.utils.DriverNames;
+import com.fannie.utils.ScreenShot;
+
+public class FlightPageTest {
+
+	String baseURL;
+	WebDriver driver;
+	GenericMethods genMethods;
+	ScreenShot screenShot;
+
+	@Before
+	public void setUp() throws Exception {
+		driver = DriverFactory.getDriver(DriverNames.CHROME);
+
+		baseURL = "https://www.expedia.com/";
+		genMethods = new GenericMethods(driver);
+		screenShot = new ScreenShot(driver);
+		driver.get(baseURL);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		screenShot.takeScreenShot();
+		Thread.sleep(2000);
+		driver.quit();
+	}
+
+	@Test
+	public void test() {
+		FlightPagePOM.clickFlightTab(driver);
+	}
+
+}

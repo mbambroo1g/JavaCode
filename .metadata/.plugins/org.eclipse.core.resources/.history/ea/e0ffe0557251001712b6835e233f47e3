@@ -1,0 +1,45 @@
+package com.assignment1;
+
+import org.omg.CORBA.PUBLIC_MEMBER;
+
+public abstract class Vehicle {
+	String color;
+	int noOfWheels;
+	String model;
+	int startingSpeed;
+	int finalSpeed;
+	int time;
+	
+	public Vehicle(String color, int noOfWheels, String model) {
+		super();
+		this.color = color;
+		this.noOfWheels = noOfWheels;
+		this.model = model;
+	}
+
+	public static void accelerate(int startingSpeed, int finalSpeed, int time){
+		float acceleration;
+		acceleration = (finalSpeed-startingSpeed)*60/time;
+		System.out.println("Acceleration of the vehicle is: "+acceleration);
+	}
+	
+	public static void decelerate(int startingSpeed, int finalSpeed, int time){
+		
+	}
+	
+	public static void checkAccSpeed(int startingSpeed, int finalSpeed){
+		if(startingSpeed>finalSpeed)
+			throw RuntimeException("The vehicle is not accelerating.");
+	}
+	
+	public static void checkDecSpeed(int startingSpeed, int finalSpeed){
+		if(finalSpeed>startingSpeed)
+			throw RuntimeException("The vehicle is not braking.");
+	}
+	
+	public abstract void move();
+	
+}
+
+
+

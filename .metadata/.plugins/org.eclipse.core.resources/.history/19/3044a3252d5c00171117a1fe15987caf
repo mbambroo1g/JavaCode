@@ -1,0 +1,41 @@
+package com.fannie.pom;
+
+import java.util.Date;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class FlightPagePOM {
+	private static WebElement element;
+	public static void clickFlightTab(WebDriver driver){
+		driver.findElement(By.id("tab-flight-tab-hp")).click();
+	}
+
+	public static void sendArrivalDate(String arrivalDate, WebDriver driver) {
+		element = driver.findElement(By.id("flight-returning-hp-flight"));
+		element.clear();
+		element.sendKeys(arrivalDate);
+	}
+
+	public static void sendDepartureDate(String depatureDate, WebDriver driver) {
+		element = driver.findElement(By.id("flight-departing-hp-flight"));
+		element.clear();
+		element.click();
+		driver.findElement(By.xpath(xpathExpression)))
+		element.sendKeys(depatureDate);
+	}
+
+	public static void sendFlyFromTextBox(String flyFrom, WebDriver driver) {
+		element = driver.findElement(By.id("flight-origin-hp-flight"));
+		element.clear();
+		element.sendKeys(flyFrom);
+	}
+
+	public static void sendFlyToTextBox(String flyTo, WebDriver driver) {
+		element = driver.findElement(By.id("flight-destination-hp-flight"));
+		element.clear();
+		element.sendKeys(flyTo);
+	}
+
+}

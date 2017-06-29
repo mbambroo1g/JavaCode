@@ -1,0 +1,17 @@
+package com.fannie;
+
+import javax.jws.WebService;
+
+@WebService(endpointInterface = "com.naveen.TimeServer")
+public class TimeServerImpl implements TimeServer {
+	@Override
+	public String getCompanyName() {
+		return "Naveen Air Travels";
+	}
+	@Override
+	public String getServerName(String name){
+		return "The Server Name is " + name;
+	}
+	@Override
+	public String getTimeAsString() { return new Date().toString(); }
+}

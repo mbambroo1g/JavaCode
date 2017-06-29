@@ -1,0 +1,39 @@
+
+Jun 20, 2017 14:36:58.86 NEW SESSION
+Jun 20, 2017 14:36:58.86 1497983818831	addons.update-checker	WARN	Update manifest for aushelper@mozilla.org did not contain an updates property
+Jun 20, 2017 14:36:58.92 1497983818891	addons.update-checker	WARN	Update manifest for firefox@getpocket.com did not contain an updates property
+Jun 20, 2017 14:36:58.93 1497983818907	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
+Jun 20, 2017 14:36:58.95 1497983818920	addons.update-checker	WARN	Update manifest for e10srollout@mozilla.org did not contain an updates property
+Jun 20, 2017 14:36:58.97 1497983818940	addons.update-checker	WARN	Update manifest for webcompat@mozilla.org did not contain an updates property
+Jun 20, 2017 16:01:24.65 [Parent 6224] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+Jun 20, 2017 21:39:52.16 NEW SESSION
+Jun 20, 2017 21:39:52.16 console.warn: LoginHelper: dedupeLogins: Deduping with a scheme preference but couldn't get the preferred origin scheme.
+Jun 20, 2017 21:54:39.07 console.warn: LoginHelper: dedupeLogins: Deduping with a scheme preference but couldn't get the preferred origin scheme.
+Jun 20, 2017 21:56:07.65 [Child 4528] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Jun 20, 2017 21:56:07.65 [Child 4528] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Jun 20, 2017 22:17:45.54 console.warn: LoginHelper: dedupeLogins: Deduping with a scheme preference but couldn't get the preferred origin scheme.
+Jun 20, 2017 23:59:34.71 1498017574712	Sync.ErrorHandler	ERROR	Sync encountered a login error
+Jun 21, 2017 24:15:13.35 console.warn: LoginHelper: dedupeLogins: Deduping with a scheme preference but couldn't get the preferred origin scheme.
+Jun 21, 2017 06:40:46.62 1498041646623	Sync.ErrorHandler	ERROR	Sync encountered a login error
+Jun 21, 2017 08:35:03.20 1498048503204	Sync.ErrorHandler	ERROR	Sync encountered a login error
+
+Jun 21, 2017 09:23:21.90 NEW SESSION
+Jun 21, 2017 09:23:21.90 console.warn: LoginHelper: dedupeLogins: Deduping with a scheme preference but couldn't get the preferred origin scheme.
+Jun 21, 2017 10:49:05.65 console.warn: LoginHelper: dedupeLogins: Deduping with a scheme preference but couldn't get the preferred origin scheme.
+Jun 21, 2017 10:50:34.30 [Child 3816] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Jun 21, 2017 10:50:34.30 [Child 3816] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Jun 21, 2017 14:36:58.20 1498070218188	addons.update-checker	WARN	Update manifest for firefox@getpocket.com did not contain an updates property
+Jun 21, 2017 14:36:58.21 1498070218206	addons.update-checker	WARN	Update manifest for aushelper@mozilla.org did not contain an updates property
+Jun 21, 2017 14:36:58.23 1498070218217	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
+Jun 21, 2017 14:36:58.23 1498070218227	addons.update-checker	WARN	Update manifest for webcompat@mozilla.org did not contain an updates property
+Jun 21, 2017 14:36:58.42 1498070218410	addons.update-checker	WARN	Update manifest for e10srollout@mozilla.org did not contain an updates property
+Jun 21, 2017 21:20:13.92 console.warn: LoginHelper: dedupeLogins: Deduping with a scheme preference but couldn't get the preferred origin scheme.
+Jun 22, 2017 08:54:01.16 [Child 7824] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Jun 22, 2017 08:54:01.16 [Child 7824] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Jun 22, 2017 14:36:58.26 1498156618239	addons.update-checker	WARN	Update manifest for aushelper@mozilla.org did not contain an updates property
+Jun 22, 2017 14:36:58.29 1498156618287	addons.update-checker	WARN	Update manifest for e10srollout@mozilla.org did not contain an updates property
+Jun 22, 2017 14:36:58.30 1498156618297	addons.update-checker	WARN	Update manifest for firefox@getpocket.com did not contain an updates property
+Jun 22, 2017 14:36:58.31 1498156618306	addons.update-checker	WARN	Update manifest for webcompat@mozilla.org did not contain an updates property
+Jun 22, 2017 14:36:58.32 1498156618316	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
+Jun 23, 2017 09:13:52.08 1498223632072	addons.xpi	WARN	Exception running bootstrap method shutdown on shield-recipe-client@mozilla.org: TypeError: log is null (resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Users/Huser/AppData/Roaming/Mozilla/Firefox/Profiles/t5r7emg4.default/features/%7Bea936705-ed1b-43f8-9be0-8a223d1c59d5%7D/shield-recipe-client@mozilla.org.xpi!/bootstrap.js:96:5) JS Stack trace: this.shutdown@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///C:/Users/Huser/AppData/Roaming/Mozilla/Firefox/Profiles/t5r7emg4.default/features/%7Bea936705-ed1b-43f8-9be0-8a223d1c59d5%7D/shield-recipe-client@bootstrap.js:96:5 < callBootstrapMethod@XPIProvider.jsm:4903:11 < observe@XPIProvider.jsm:2884:15

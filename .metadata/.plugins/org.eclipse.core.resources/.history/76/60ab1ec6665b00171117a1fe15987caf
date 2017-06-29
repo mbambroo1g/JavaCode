@@ -1,0 +1,13 @@
+package com.fannie.generics;
+
+import java.security.PublicKey;
+
+import org.openqa.selenium.WebDriver;
+
+public class GenericMethods {
+	private WebDriver driver();
+	public GenericMethods(WebDriver driver){
+		this.driver = driver;
+		
+	}
+}

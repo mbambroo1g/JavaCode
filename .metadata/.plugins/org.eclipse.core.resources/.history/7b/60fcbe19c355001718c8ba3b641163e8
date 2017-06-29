@@ -1,0 +1,11 @@
+@WebService(endpointInterface = "com.naveen.TimeServer")
+public class TimeServerImpl implements TimeServer {
+ public String getTimeAsString() { return new Date().toString(); }
+ public String getServerName(String name){
+ return "The Server Name is " + name;
+ }
+@Override
+public String getCompanyName() {
+return "Naveen Air Travels";
+}
+}

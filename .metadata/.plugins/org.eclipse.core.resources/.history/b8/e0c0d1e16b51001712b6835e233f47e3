@@ -1,0 +1,32 @@
+package com.assignment1;
+
+public abstract class Vehicle {
+	String color;
+	int noOfWheels;
+	String model;
+	int initialSpeedInMph;
+	int newSpeedInMph;
+	int timeinMinutes;
+	
+	public Vehicle(String color, int noOfWheels, String model) {
+		super();
+		this.color = color;
+		this.noOfWheels = noOfWheels;
+		this.model = model;
+	}
+
+	public accelerate(initialSpeedInMph, newSpeedInMph){
+		float acceleration;
+		acceleration = (newSpeed-initialSpeed)/time;
+		
+		return acceleration;
+	}
+	public abstract void decelerate();
+	public abstract void move();
+	
+}
+
+
+v = u+at
+v=u-at
+

@@ -1,0 +1,27 @@
+package com.fannie.basic;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;//common package
+
+public class BasicEx1 {
+	public static void main(String[] args) {
+		//Load the driver
+		//step 1: TODO -- loads the chrome driver.
+		WebDriver driver = new ChromeDriver();
+		System.setProperty("", "C:\\Software\\SeleniumDriver\\chromeDriver.exe");
+		//Open the browser/connection
+		//step 2: TODO
+		
+		
+		
+		//Execute the job
+		//step 3: TODO
+		
+		
+		
+		//Close the browser/connection
+		//step 4: TODO
+
+
+	}
+}

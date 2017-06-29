@@ -1,0 +1,20 @@
+package com.fannie.utils;
+
+import java.io.File;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
+public class ScreenShot {
+	private  WebDriver driver;
+	public ScreenShot(WebDriver driver){
+		this.driver = driver;
+	}
+	public void takeScreenShot(String fileName) {
+		String path = "C:\\Users\\Huser\\Desktop\\SeleniumImages\\";
+		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		
+
+	}
+}

@@ -1,0 +1,10 @@
+package com.fannie.utils;
+
+import org.openqa.selenium.WebDriver;
+
+public class ScreenShot {
+	private  WebDriver driver;
+	public ScreenShot(Webdriver driver){
+		this.driver = driver;
+	}
+}

@@ -1,0 +1,49 @@
+package com.fannie.pom;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class FlightPagePOM {
+	private static WebElement element;
+	public static void clickFlightTab(WebDriver driver){
+		driver.findElement(By.id("tab-flight-tab-hp")).click();
+	}
+
+	public static void clickSearch(WebDriver driver) {
+		element = driver.findElement(By.xpath(".//*[@id='gcw-flights-form-hp-flight']/div[8]/label/button"));
+		element.click();
+	}
+
+	public static void selectDepartDate(int departDate, WebDriver driver) {
+		String selectDateXPath=".//*[@id='flight-departing-wrapper-hp-flight']/div/div/div[2]/table/tbody/tr/td/button[text()='"+departDate+"']";
+		element = driver.findElement(By.xpath(selectDateXPath)).click();
+
+	}
+
+	public static void sendArrivalDate(String returnDate, WebDriver driver) {
+		element = driver.findElement(By.id("flight-returning-hp-flight"));
+		element.clear();
+		element.sendKeys(returnDate);
+	}
+
+	public static void sendDepartureDate(String departDate, WebDriver driver) {
+		element = driver.findElement(By.id("flight-departing-hp-flight"));
+		element.clear();
+		element.sendKeys(departDate);
+	}
+
+	public static void sendFlyFromTextBox(String flyFrom, WebDriver driver) {
+		element = driver.findElement(By.id("flight-origin-hp-flight"));
+		element.clear();
+		element.sendKeys(flyFrom);
+	}
+
+	public static void sendFlyToTextBox(String flyTo, WebDriver driver) {
+		element = driver.findElement(By.id("flight-destination-hp-flight"));
+		element.clear();
+		element.sendKeys(flyTo);
+	}
+
+
+}

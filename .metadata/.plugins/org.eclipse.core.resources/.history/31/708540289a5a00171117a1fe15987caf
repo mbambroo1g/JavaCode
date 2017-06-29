@@ -1,0 +1,19 @@
+package com.fannie.utils;
+
+import org.openqa.selenium.WebDriver;
+
+public class DriverFactory {
+	static WebDriver driver;
+	public static WebDriver getDriver(Strting driverName) {
+		if(driverName.equalsIgnoreCase("CHROME")){
+		
+		}
+		else if(driverName.equalsIgnoreCase("FIREFOX")){
+			
+		}
+		else if(driverName.equalsIgnoreCase("IE")){
+			
+		}
+		return null;
+	}
+}

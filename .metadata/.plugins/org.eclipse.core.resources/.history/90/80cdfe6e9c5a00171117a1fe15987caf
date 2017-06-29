@@ -1,0 +1,27 @@
+package com.fannie.utils;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class DriverFactory {
+	static WebDriver driver;
+	public static WebDriver getDriver(String driverName) {
+		if(driverName.equalsIgnoreCase("CHROME")){
+			System.setProperty(Driver.CHROME, Driver.CHROME_PATH);
+			driver = new ChromeDriver();
+			return driver;
+		}
+		else if(driverName.equalsIgnoreCase("FIREFOX")){
+			System.setProperty(Driver.FIREFOX, Driver.FIREFOX_PATH);
+			driver = new FirefoxDriver();
+			return driver;
+		}
+		else if(driverName.equalsIgnoreCase("IE")){
+			System.setProperty(Driver.IE, Driver.IE_PATH);
+			driver = new InternetExplorerDriver();
+		}
+		return null;
+	}
+}

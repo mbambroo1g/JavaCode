@@ -1,0 +1,24 @@
+package com.fannie;
+
+import java.util.Date;
+
+import javax.jws.WebService;
+
+@WebService(endpointInterface = "com.naveen.TimeServer")
+public class TimeServerImpl implements TimeServer {
+	@Override
+	public String checkCreditScore(String custName, int creditScore) {
+		return null;
+	}
+	@Override
+	public String getCompanyName() {
+		return "Fannie Mae";
+	}
+	@Override
+	public String getServerName(String name){
+		return "Server says Hi to " + name;
+	}
+
+	@Override
+	public String getTimeAsString() { return "Today's Date is: "+ new Date().toString(); }
+}

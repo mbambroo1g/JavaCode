@@ -1,0 +1,28 @@
+package com.fannie.basic;
+
+import org.openqa.selenium.WebDriver;
+
+import com.fannie.utils.DriverFactory;
+
+public class BasicEx2 {
+	public static void main(String[] args) {
+		WebDriver driver = DriverFactory.getDriver("chrome");
+		
+		baseUrl= "http://google.com";
+		driver.get(baseUrl);
+
+		//Execute the job
+		//step 3: TODO
+		System.out.println("Title is: "+driver.getTitle());
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		//Close the browser/connection
+		//step 4: TODO
+		driver.close();
+	}
+}

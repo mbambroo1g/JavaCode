@@ -1,0 +1,55 @@
+package com.fannie.screenshots;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.fannie.generics.GenericMethods;
+import com.fannie.utils.DriverFactory;
+import com.fannie.utils.DriverNames;
+import com.fannie.utils.ElementType;
+import com.fannie.utils.ScreenShot;
+
+public class ScreenShotTest {
+	String baseURL;
+	WebDriver driver;
+	GenericMethods genMethods;
+	ScreenShot screenShot;
+
+	@Test
+	public void partialTest() throws Exception{
+
+		genMethods.getElement("tab-flight-tab-hp", ElementType.ID).click();
+		genMethods.getElement("flight-origin-hp-flight",ElementType.ID).clear();
+		genMethods.getElement("flight-origin-hp-flight", ElementType.ID).sendKeys("New York, NY (JFK-John F. Kennedy Intl.)");
+		Thread.sleep(2000);
+		genMethods.getElement("flight-destination-hp-flight", ElementType.ID).clear();
+		genMethods.getElement("flight-destination-hp-flight", ElementType.ID).sendKeys("New York, NY (JFK-John F. Kennedy Intl.)");
+		Thread.sleep(1500);
+			genMethods.getElement("btn-primary btn-action gcw-submit",ElementType.CLASSNAME).click();
+			Thread.sleep(1500);
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		driver = DriverFactory.getDriver(DriverNames.CHROME);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		baseURL = "https://www.expedia.com/";
+		genMethods = new GenericMethods(driver);
+		screenShot = new ScreenShot(driver);
+		driver.get(baseURL);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		Thread.sleep(2000);
+		driver.quit();
+	}
+}

@@ -1,0 +1,16 @@
+package com.fannie;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.swing.text.Style;
+
+@WebService
+@SOAPBinding(style = Style.RPC)
+public interface TimeServer {
+	public @WebMethod String getCompanyName();
+	public @WebMethod String getServerName(String name);
+	public @WebMethod String getTimeAsString();
+}
+}
+

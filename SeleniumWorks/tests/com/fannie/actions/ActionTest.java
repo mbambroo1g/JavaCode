@@ -1,0 +1,56 @@
+package com.fannie.actions;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import com.fannie.generics.GenericMethods;
+import com.fannie.utils.DriverFactory;
+import com.fannie.utils.DriverNames;
+import com.fannie.utils.ElementType;
+import com.fannie.utils.ScreenShot;
+
+public class ActionTest {
+	String baseURL;
+	WebDriver driver;
+	GenericMethods genMethods;
+	ScreenShot screenShot;
+
+	@Before
+	public void setUp() throws Exception {
+		driver = DriverFactory.getDriver(DriverNames.CHROME);
+
+		baseURL = "http://www.tasyah.com/";
+		genMethods = new GenericMethods(driver);
+		screenShot = new ScreenShot(driver);
+		driver.get(baseURL);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		screenShot.takeScreenShot();
+		Thread.sleep(2000);
+		driver.quit();
+	}
+
+	@Test
+	public void test() throws Exception{
+		String menuXpath=".//*[@id='menu_category_Menu_VIfWm2LT_332']/a/span/span";
+		String subMenuXpath=".//*[@id='menu_category_Menu_VIfWm2LT_332']/div/div/div[1]/div/ul/li[3]/a/span";
+
+		WebElement menuElement=genMethods.getElement(menuXpath,ElementType.XPATH);
+
+		Actions action = new Actions(driver);
+		action.moveToElement(menuElement).perform();//Job is only executed when  perform() is invoked.
+		Thread.sleep(1000);
+		WebElement subMenuElement = genMethods.getElement(subMenuXpath,ElementType.XPATH);
+
+		//action.click(subMenuElement).perform();
+		subMenuElement.click();
+
+
+	}
+}

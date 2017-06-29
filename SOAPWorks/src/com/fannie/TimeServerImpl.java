@@ -1,0 +1,32 @@
+package com.fannie;
+
+import java.util.Date;
+
+import javax.jws.WebService;
+
+@WebService(endpointInterface = "com.fannie.TimeServer")
+public class TimeServerImpl implements TimeServer {
+	@Override
+	public String checkCreditScore(String custName, int creditScore) {
+		if(creditScore<400){
+			return "Sorry loan cannot be saction to Mr/Ms "+ custName;
+		}
+		else if(creditScore>400 && creditScore<600){
+			return "We are working on your profile, Mr/Ms "+custName;
+		}
+		else{
+			return "Loan is approved, Mr/Ms "+custName;
+		}
+	}
+	@Override
+	public String getCompanyName() {
+		return "Fannie Mae";
+	}
+	@Override
+	public String getServerName(String name){
+		return "Server says Hi to " + name;
+	}
+
+	@Override
+	public String getTimeAsString() { return "Today's Date is: "+ new Date().toString(); }
+}

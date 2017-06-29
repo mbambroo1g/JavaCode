@@ -1,0 +1,17 @@
+package com.fannie;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
+import javax.jws.soap.SOAPBinding.Style;
+//ctrl+shift+O -> add all imports
+
+@WebService @SOAPBinding(style = Style.RPC)
+public interface TimeServer {
+	@WebMethod
+	public String checkCreditScore(String custName, int creditScore);
+	public @WebMethod String getCompanyName();
+	public @WebMethod String getServerName(String name);
+	public @WebMethod String getTimeAsString();
+}
+

@@ -1,0 +1,10 @@
+package com.fannie.utils;
+
+import org.openqa.selenium.WebDriver;
+
+public class DriverFactory {
+	static WebDriver driver;
+	public static WebDriver getDriver() {
+		
+	}
+}

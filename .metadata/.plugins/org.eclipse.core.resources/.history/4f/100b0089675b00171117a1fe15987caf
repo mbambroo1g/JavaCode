@@ -1,0 +1,21 @@
+package com.fannie.generics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.fannie.utils.ElementType;
+
+public class GenericMethods {
+	private WebDriver driver;
+	public GenericMethods(WebDriver driver){
+		this.driver = driver;
+	}
+	public WebElement getElement(String locator, String type){
+		WebElement element;
+		if(type.equals(ElementType.ID)){
+			element = driver.findElement(By.id(locator));
+		}
+	}
+	
+}

@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [22/Jun/2017:13:12:37 -0400] "PUT /RestFullWorks/resources/message HTTP/1.1" 200 58
+0:0:0:0:0:0:0:1 - - [22/Jun/2017:13:12:54 -0400] "POST /RestFullWorks/resources/message HTTP/1.1" 200 58
+0:0:0:0:0:0:0:1 - - [22/Jun/2017:13:28:54 -0400] "POST /RestFullWorks/resources/message HTTP/1.1" 200 52
+0:0:0:0:0:0:0:1 - - [22/Jun/2017:13:29:17 -0400] "PUT /RestFullWorks/resources/message HTTP/1.1" 200 56
+0:0:0:0:0:0:0:1 - - [22/Jun/2017:13:29:47 -0400] "GET /RestFullWorks/resources/message HTTP/1.1" 200 1051
+0:0:0:0:0:0:0:1 - - [22/Jun/2017:13:29:58 -0400] "GET /RestFullWorks/resources/message/201 HTTP/1.1" 200 56
+0:0:0:0:0:0:0:1 - - [22/Jun/2017:13:29:58 -0400] "GET /RestFullWorks/resources/message/201 HTTP/1.1" 200 56
+0:0:0:0:0:0:0:1 - - [22/Jun/2017:13:31:53 -0400] "DELETE /RestFullWorks/resources/message/201 HTTP/1.1" 200 2

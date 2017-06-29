@@ -1,0 +1,44 @@
+package com.fannie.utils;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
+public class ScreenShot {
+	private  WebDriver driver;
+	public ScreenShot(WebDriver driver){
+		this.driver = driver;
+	}
+
+	public void takeScreenShot() {
+		String path = "C:\\Users\\Huser\\Desktop\\SeleniumImages\\";
+		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		Date date= new Date();
+		Calendar gc = GregorianCalendar.getInstance();
+
+		try {
+			String fileName = gc.get(Calendar.DATE)+"-"+gc.get(Calendar.MINUTE)+"-"+gc.get(Calendar.SECOND)+".png";
+			FileUtils.copyFile(file, new File(path+fileName));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void takeScreenShot(String fileName) {
+		String path = "C:\\Users\\Huser\\Desktop\\SeleniumImages\\";
+		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+		try {
+			FileUtils.copyFile(file, new File(path+fileName));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
