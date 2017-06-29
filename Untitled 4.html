@@ -1,0 +1,45 @@
+<html>
+<head title='Number Game'>
+<script>
+var arrNumbers = [];
+
+function processNumberAddition(){
+	
+	var val = document.getElementById("numberTxtField").value;
+
+	if (isNaN(val)){
+		alert("Not a valid number");
+	} else if (0 != val) {
+		arrNumbers.push(parseInt (val));
+		var spanObj =  document.getElementById("numbersEntered");
+		spanObj.innerHTML = "";
+		for (var i=0; i<arrNumbers.length; i++){
+			if (spanObj.innerHTML != "") {
+				spanObj.innerHTML += ", ";	
+			}
+			spanObj.innerHTML += arrNumbers[i];
+		}
+	} else {
+		var val = 0;
+		for (var i=0; i<arrNumbers.length; i++){
+			
+			val += arrNumbers[i];
+		}
+
+		document.getElementById("sum").innerHTML = val;
+	}
+
+	document.getElementById("numberTxtField").value = "";
+}
+
+</script>
+</head>
+<body>
+	<h1>The Number Game</h1>
+	<br>
+	Enter number <input type="text" id="numberTxtField"/> 
+	<button type="button"  onclick="processNumberAddition()">Click Me!</button>
+	<br>
+	<span id="sum"></span>
+</body>
+</html>
