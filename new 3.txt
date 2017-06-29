@@ -1,0 +1,25 @@
+<body>
+
+<h2>Login Form</h2>
+
+<form action="#">
+ 
+  <div class="container">
+    <label><b>Username</b></label>
+    <input placeholder="Enter Username" id="uname" name="uname" required="" class=" firepath-matching-node" type="text">
+
+    <label><b>Password</b></label>
+    <input placeholder="Enter Password" id="pwd" name="pwd" required="" class=" firepath-matching-node" type="password">
+        
+    <button type="submit" id="submitBtn" class=" firepath-matching-node">Login</button>
+    <input checked="checked" type="checkbox"> Remember me
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+</form>
+
+</body>
+

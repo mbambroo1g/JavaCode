@@ -1,0 +1,145 @@
+all packages - lowercase
+all constants - UPPER CASE
+all classes - PascalCase
+all methods and variables - camelCase
+
+Grady Booch - OOPS
+Class is a logical entity.It is logically representable. A calss is a noun - common noun.
+
+class Emp{} - Reusable component if it does not have a main.
+
+class Emp{
+	//instance varibles will go inside the heap as the new objects are instanciated. In this case, the variables are empId and name.
+	
+	int empId;
+	String name; //string is a wrapper calss not a datatype. Collection of characters.
+	
+	//method section - this will go inside the stack. These are also called as behaviors.
+	void work(){};
+	void assignProject(){};
+	void attendMeetings(){};
+}
+
+//Instance of a class is an object. 
+//heap memory expands and shrinks. when a new object is created, it is assigned space in heap memory.
+
+Emp e1,e2;
+e1 = new Emp();
+e1.name = "HARRY SOMETHING";
+
+e1.work();
+e1.attendMeetings();
+
+e2 = new Emp();
+e2.name = "PETER SCOTT"
+e2.work(); Object of E2 invokes work.
+e2.assignProject();
+
+All memories represented as clouds are heap.
+
+Constructors - 
+class Emp{}
+The compiler injects the code (constructor) - In this case
+
+Class Emp{
+	public Emp(); - When there are no arguments, it is called as the default constructor.
+	
+}
+
+
+class Emp{
+	//instance varibles will go inside the heap as the new objects are instanciated. In this case, the variables are empId and name.
+	
+	int empId;
+	String name; //string is a wrapper calss not a datatype. Collection of characters.
+	Double salary;
+	
+	//constructors
+	public Emp()
+	{ empId = 0}name = null;
+	sal = 0.0;}
+	
+	//method section - this will go inside the stack. These are also called as behaviors.
+	void work(){};
+	void assignProject(){};
+	void attendMeetings(){};
+}
+
+
+Encapsulation:
+1. Private
+2. Protected
+3. Default - also called package level
+4. Public
+
+Access specifiers
+
+n_private - scope within the class where it is declared
+n_protected - package and inherited
+n_default - only in package
+n_public - anywhere
+
+
+
+				same class			Same package inherited		Same Package not inherited			Other package - Inherited		Other package - Not inherited	
+private				Y						N								N								N								N
+protected			Y						Y								Y(?)							Y								N
+default				Y						Y								Y								N								N
+public				Y						Y								Y								Y								Y
+
+
+
+Getters and Setters
+Getter - Public method give access to private variables.
+
+class Object{
+//properties and behaviors
+public
+}
+
+class Emp extends Object{
+Your properties and behaviors and also from object class.
+
+System.out.print - syso Ctrl + space
+}
+
+Emp{
+	Variables: Id, Name, Salary}
+	
+	Client has the main function. Also called as the entry point.
+	
+	Emp e = new Emp();
+	
+	Stack - behaviours
+	setId
+	getId
+	setName
+	getName
+	setSalary
+	getSalary
+	
+	We dont give access to proivate variable directly instread make public methods and make it accessible. We can write business logic in the method.
+	e.setName
+	
+	this.empName = name from the current instance.
+	Address is a hexcode... ToString(). Every object should be inherited from an object class... 
+	
+Function override - changing the behavior to get meaningful values instead.
+
+Heap keeps piling if new objects are added. It can resukt in a memory leak.
+
+class Emp {
+	Emp() {}  // Constructor
+	~Emp() {}  //Desctructor- used to clean up the memory (heap).
+}
+	Finalize method is used to clear the memory.
+	
+	Garbage collector in java is implicitly called. It is a very expensive resource.
+	
+	Ageining - every threat will get the priority for the job based on the time elapsed. Garbage collectors come in the place when it there is no more momory left.
+	
+	LRU - Least recently used algorithm.
+	Transaction based companies - finalize
+	
+	
+	System.gc(); - Don't ever execute this in code. This is like flushing the code. Explicitly calling gc is discouraged.

@@ -1,0 +1,28 @@
+@Before
+	public void setUp() throws Exception {
+		chromeOptions  = new ChromeOptions();
+
+		chromeOptions.addArguments("--start-maximized");
+		chromeOptions.addArguments("--disable-web-security");
+		chromeOptions.addArguments("--no-proxy-server");
+		chromeOptions.addArguments("--incognito");
+
+		java.util.Map<String, Object> prefs = new HashMap<String, Object>();		
+
+		prefs.put("credentials_enable_service", false);
+		prefs.put("profile.password_manager_enabled", false);
+		chromeOptions.setExperimentalOption("prefs", prefs);
+		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+
+		capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+		driver = new ChromeDriver(capabilities);
+	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+//	    driver.manage().window().maximize();
+		baseURL = "http://webmail.sdettraining.com/Login.aspx";
+		waitTypes= new WaitTypes(driver);
+	genericMethod = new GenericMethods(driver);
+	driver.get(baseURL);
+
+	}
+

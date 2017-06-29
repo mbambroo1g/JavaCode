@@ -1,0 +1,96 @@
+Jasmine
+Mocha
+Chai
+Qunit/Test unit
+
+Jasmine is for unit testing - unit testing bridges the gap between tech n non tech people.
+
+What is this recording?
+Jasmine is avaialble in github.
+
+fn1(){
+}
+
+fn2(){
+}
+.
+.
+.
+
+Behavior Driven Development
+Spec test - GWT format
+Given 
+When
+Then
+
+Jasmine will connect Function testing with spec/use case
+
+mocha = wrapper
+chai= core of mocha which actually tests.
+
+Qunit is very light.
+Jasmine is most widely used for testing.
+
+\\\
+Every test cae must be inside a suite.
+
+function fn(){
+	console.log("Hello.")
+}
+function fn1(){
+	console.log("Hello1"}
+
+callback function - function executes when ready. This is called promise.
+
+promise - the function when ready called itself. This is called promise.
+When the function is loaded, it does something. If its not loaded, theree would still be a fail behavior.
+
+describe as a function takes two params.
+
+describe("statement", fn()); - if fn() is not loaded,l it will fail.
+
+
+describe("statement", function(){
+	it("some statement", function(){
+	expect(true).toBe(true);
+	});
+);}
+
+it is a function - expect is actual,
+to be is actual.
+
+beforeEach - exceutred before each test case.
+before all - executed before any test case is executed, called only once.
+
+after each - called after each test case is executed. Good fo reserting things insidea  suite.
+after all - called at the end of suite. only once.
+
+
+expect(null),toBe(undefined)-- ask
+
+Jasmine allows a custom matcher.
+
+--SELENIUM--
+
+
+Phantomjs is a browser which is not viewable.
+cucumber/gerkin
+selenium supports browsers which are not viewable. continually tests web applications.
+
+Selenium IDE- record n run (only in firefox)
+Selenium RC server - local server (depracated)
+Selenium WebDriver - writing robust test scripts
+Selenium Grid - various enviroments. clones test cases for different enviroments. Could be used for SMDU UI.
+
+--GRID is only configuration for server . DevOps will help perform this job.
+
+record n replaY - QTP had such a thing.
+-----
+Webdriver first
+
+we will use eclipse.
+ 
+
+
+
+

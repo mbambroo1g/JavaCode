@@ -1,0 +1,171 @@
+Encapsulation
+Inheritance - happens with help of extends... By default, any java class always inherits Object{} which is a super class. 
+Polymorpjhism - approach where 1 object holds references of multiple objects.
+Vehicle can refer to any of the children.
+
+Abstraction - impl at super class.
+Interface - is a way for achieving multi level inheritance.
+
+Comparable is an inheritance used for sorting. compareTo has to be defined in tehclass implementing Comparable.
+-----------------------------------------------------
+
+Exceptions:
+In java, when we try doing some work, we have exceptions at runtime.
+Error handling - two major key stakeholders.
+
+A runtime error is an exception.
+
+Object{} 
+
+10/0 - causes an exception. Exceptions are thrown by an immediate child of Object{}, called Throwable{}.
+Throwable{} has two children:
+Errors{}
+Exceptions{} -
+			Unchecked Exceptions - JVM can take care of them.
+				Arithmatic
+				Array Index Out of Bounds
+				Number Format exception
+				Negative Array sized exceptions 
+				Out of Memory
+				(There are over 800 types)
+				
+			Checked Exceptions - If a file doesn't exist and it needs to be oopened. Java cannot be blamed...
+				IO exception
+				File not found EXception
+				SQL Exceptions
+				Remote exception
+				
+package com.fannie.day3;
+
+public class Exceptions {
+	public static void main(String[] args) {
+		int x = 44/0; // JVM issues an abort
+		System.out.println("Something goes here");
+	}
+
+}
+
+Stack trace is the full information.
+
+Persistent Memory - BEgins with JVM but may end inside JVM or at a thord party application.
+Transient memeory - begins n ends with JVM.
+
+Specific exceptions are placed above generic exception. Tha analogy in class was a baseball match.
+
+finally is another block which is always exceuted no matter what.
+
+try-catch
+try-catch(es)
+try-catch(es)-finally
+try-finally
+
+
+Throw{} is a class at statement level.
+Throws{} is a class at method level.
+
+
+Partial delegation:
+main(){hello();}
+hello(){hi();}
+hi(){cya();}
+cya(){biz logic}
+
+When main is invoked, it goes all the way to cya.
+If cya fails, the exception maps to hi, then to hello and finally to main.. This is partial delegation.
+
+
+
+Nee Exceptions shoudl be chceked because java doesnt know it. Compiler enforced exceptions.
+
+
+Biz Logic
+
+10/0
+connect to dB
+																	client
+																		main
+																			biz Logic is invoked.
+
+
+					Exception ground - Java creates this
+					Any exception which is handled is here. Checked exceptions would be 
+					outside the ground.
+					
+Runtime Exception comes under unchecked category. We were throwing our exceptions under RTE.
+Under Biz logic we can throw chceked or unchecked exceptions. 
+
+
+-------------------------------------------------------
+I/O -
+
+Stream classes - Byte streams only.
+Reader and writer classes - only character based jobs.
+
+
+										Operating System
+							
+
+								Buffer			Buffer Reader - Read from Buffer	
+										        Buffer Writer - Write to Buffer
+
+End User						uoy era woh ih
+	message user wants
+	to send					/					\\
+		(Hi how are you)						 \\			ISR
+												  \\        OSW
+												   \\ 
+														Java    readLine - String<Enter>
+																read - int
+															
+															Data shuffling and corruption has to be avoided. Input streamers(readers)make sure there is no garbling.
+																											Output streamers(writers)write to buffer. Every reader has a writer.
+															
+															
+		New Info is first stored in buffer. Chunks or pieces are expected. Allocation - what OS reserves for java. Any data will be sent in form of a stream.
+		Streamer - Determine simple usage. 
+		
+		File output stream 
+		Line Number Input stream - get a cvs form
+		Data Input stream - primitejava datatypes
+		Buffer Reader/Writer
+		
+		Java.lang
+		java.io - IO stuff
+		
+		
+		1.. Read the data from enduser and write to file.
+		2.. Read the data from file abd show to end user.
+		3.. Read and write objects. (Serialization)
+		
+
+	Readers and Writers only take character data. Serialization is packing something while sendint over.
+	Reading from would use deserealization....
+	
+	Emp e = new Emp();
+	save e- e is a graph object;
+	
+	various references.
+	Object Input and Output are streamers.
+	
+	.ser - extn for streamers.
+	
+	Serealizable is a marker interface.
+	interface Serializable{} - Remote and Clone are marker interfaces.,
+	Just a stamp - there is nothing in the interface.
+	
+	
+	Generics and Collections:
+	
+	int[] x = new int[4];
+	x[5]=33; -> AIOBE - array out of bounds exception.
+	
+	Strongstram.....
+	Template
+	----------
+	int, float primitive type.
+	Integer is a wrapper class....
+	
+	Object does not have a definite size.
+	Object can dynamically change with time.
+	
+	Integer is a class and int is a primitive type...LRU - least recently used.......

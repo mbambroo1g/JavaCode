@@ -1,0 +1,297 @@
+Class Notes - June 13
+----------------------
+Review: Intro to java nad platform independence. Diff variants of jre for different OS. Arch nuetral - englisk like language
+Byte code = class file can be ported anywhere.
+public
+static
+void
+main
+
+Everything is a string. Unicode characters.
+Interface - public methods available to the end dusers. Methods could have conditions in them.
+
+-----------------------------------------------------------------------------------------------------
+
+Day 2
+
+Encapsulation - Generally done with the help of private, public, default and protected.
+Inheritance
+Polymorphism
+Abstraction
+
+Inheritance - Inheriting property of one class into another.
+
+Class A						-> 				class B
+Everything in class A goes into B. Public, DEfault and Protected. One parent one child is simple and single inheritance.
+
+class A (Generic class)-> Class B -> Class C (Specific or specialized or leaf class)
+Multi level inheritance is also acceptable.
+
+class A     class B
+	\		/
+	class C
+	
+	Not allowed in java.
+	
+	Diamond problem... 		
+	
+			Class D
+			/		\
+		Class A		Class B
+			\		/
+			class C 
+			
+			How does D get values of C from A or B??
+			
+			
+			Class Hi{}
+			
+			class HI extends Object{}{
+			public Hi(){
+				super();
+				}
+			}
+			
+			Object{} class is the supermost in the hierarchy.
+			
+			Java is 100% Object oriented programming.
+			
+			Object{} is the extended class unless otherwise defined.
+			
+			
+Vehicle
+	move()
+	carryPassengers()
+Car								Bike
+
+	hasSteering()					kickStart()
+	tankCapacity()					fuelCapacity()
+	hasFourStrokeEngine()			
+	
+	Dynamic method dispatch - if a child doesnt have a method, the method is looked for in the parent.
+	
+	--------------------------------------------
+	class Parent{
+		eat(){
+		Syso "I eat with hand"}
+	}
+	class Child extends Parent{}
+	
+	Child C = new Child()
+	c.eat()
+	 - o/p - I eat with hand
+	 
+	 class Parent{
+		eat(){
+		Syso "I eat with hand"}
+	}
+	class Child extends Parent{
+	@Override //This annotation lets the compiler know if the method is overriding the parent.
+	eat{
+		syso " i eat with spoon"}
+	}
+	
+	Child C = new Child()
+	c.eat()
+	 - o/p - I eat with spoon
+	 
+	 The child method overrides the parent.
+	 
+--------------------------------------------------------	
+	
+Vehicle -> Car -> BMW
+				-> Audi
+				-> Toyota
+				-> Mercedes
+		-> Truck -> Jeep
+				-> GMC
+				-> Ford
+		-> 
+		
+		
+		Vehicle c = new BMW(); //Valid statement
+		
+		
+		Vehicle
+		[0] -- Car
+		[1] -- Bike
+		[2] -- Truck
+		[3] -- Car
+		
+		
+		Operators: +,-, /, *, %, instanceof
+		instanceof - new Operator in java - does object belong to a class. result si strue or false.
+		
+		
+		Implement a front controller between the client and the classes. The Client just declares the array. BL layer does all the jobs.
+		
+		Format: Object instanceof class 
+		
+		For each
+		
+		Format (for each temp object: array variable )
+		
+		
+
+---encapsulation - private, protected, public, default
+	inheritance - extends
+	polymorphism -
+	abstraction - vehicle class isn't really used and all subclasses override the methods typically.
+	
+	class Figure{}
+	Figure has an area but the value depends on the subclass.
+	class Rectangle extends Figure{}{
+	public void area1(){l*b}
+	}
+	class Square extends Figure{
+	public void area2(){l*l}
+	}
+				no polymorphism.
+
+area{} - This is a concrete method.
+
+area(); abstract method in a class has a semi colon. If a method has a ";", it will have a keyword abstract.
+abstract class cannot have an object.
+
+1. if a method is not concrete, post with ;
+2. if a method is posted with ;, it is prefixed with abstract and then it is abstract.
+3. if the class has atleast 1 abstract method, then teh class shall have access modifier called abstract.
+4. if you have an abstract calss, creating an object is not allowed.
+5. The abstract method must be overridden in all subclasses. it is a mandate. This also menas all subclasses should have the method.
+6. Child of the abstract class has to override the methods which are declared abstract - mandatory.
+7. if point 6 is invalid, then make the child as abstract.
+8. It is possible to have concrete methods in an abstract class.
+9. An abstract class doesn't need to have an abstract methods, but no one can make objects of this class.
+
+
+abstract class Figure{
+	public abstract void area(); //what
+	}
+			
+class Rect extends Figure{
+	public void area(){l*b} //how
+	}	
+
+class Square extends Figure{
+	public void area(){l*l} //how
+	}	
+
+class Traingle extends Figure{
+	public void area(){(b*h)/2} //how
+	}	
+
+
+Figure - Area abstract since we didnt know what it really was.
+draw - Pen/Pencil/Scale, compass - Draw would be a concrete method. Which can be accomplished by means of utilities.
+An abstract class can have concrete methods.
+
+class VehicleBL{...display(){}}	
+
+main{
+	VehicleBl bl = new VehicleBL();
+	bl.display();
+}	
+
+If the abstract calss VehicleBl has a static method display...
+we can just write: vehicleBl.diaplay();
+
+------------------------------------------
+Interfaces; Multiple Ineritance
+
+
+interfacew Example{
+	int x; // public static final x;
+	public void hi(); // public abstract void hi();
+}
+
+classes are always objects. Interfaces are never objects. They are only rules.
+Interfaces cannot be intantiated as the content is abstract.
+They just have declarations and no java code.
+
+
+1. class can inherit from one class.
+2. Interface can inherit from one or more interface(s).
+3. A class does not extends an interface rather it implements.
+4. An interface neither extends nor implements a class. - classes have implementation. The implementor should always follow the rules. 
+
+Where do we use abstract class and where do we use an interface.
+Project designers define interfaces to define a high level framework.
+
+-------------------------------------------------
+
+Labs:
+
+
+abstract class BankLoan									Interface Income
+	toDo()												verifyIncome()
+	loanAmount()
+	repay()
+															checkCreditScore()
+															
+	
+		Mortgage extends BL			Auto	extends BL
+		toDo()						toDo()
+
+		
+		
+		naveenks.com/m/message - all code is there
+		
+		
+Anything that happens once is put in a constructor.
+loanAmount was sanctioned once and hence put in the constructor.
+The repayAmount was provided by the borrower every month or ever so often.
+-----------------------------------------------------------------
+
+
+mlHarry 
+			Heap Memory
+			60000, 780, 7000
+			These variables hold place in memory.
+
+
+											Stack Memory
+											
+								BankLoan	loanAmount
+								BankLoan	repay(int repayAmount)
+								BankLoan	foreclosure()
+								Income		checkCreditScore()
+								Income		verifyIncome()
+								
+		Implementation statement:						
+		MortgageLoan mlHarry = new MortgageLoan(60000,780,7000)		
+
+
+Interface creates the framework but the actual business logic will be within the class not in the interface.
+
+--------------------------------------------------------------------------------------------------------------
+
+Fastest algorithm: trisearch, !!!
+
+------------------------------------
+
+class Sample{
+	public void display(int x);
+	public void display(float x);
+	public void display (byte x);
+}
+display(33) - invokes int
+display (33.3) - invokes float
+
+
+lexographical comparison - 
+
+The real use of interfaces is the ability to be bale to compare and sort objects based on things like designations.
+
+Comparable is an interface in java.util
+
+binarySearch and sorting of primitive types as int or objects.
+JSE = Java Standard Edition.
+
+compareTo method is to be defined.
+
+
+
+
+
+
+		

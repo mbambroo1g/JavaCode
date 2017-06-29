@@ -1,0 +1,104 @@
+Class Notes - June 15
+Exception is object eligible to be throwable.
+IO use and behavior. 
+--------------------
+Collections:
+
+Display()
+
+Generics - 
+Collection - i want to store string. YOu can store an object except for primitive types.
+
+collection - is an object array which can grow and shrink dynamically. framework - every implementtaion is done for us.
+
+List list = new ArrayList(); //No dat atype - type unsafe or raw. Yoi can pass anything in here.
+							//Pros: Anything can be saved.
+							//Cons: too taxing for JVM as it has noidea what may be coming in.
+							//Type safe coding started with jdk1.5
+List<String> list = new ArrayList<String>();
+list1.add("...");   
+
+Type safe coding - jobs execute faster.
+
+Interface - is more like a contract
+Iterable is an interface for collections.
+
+Push/pop is specific to the stack.
+
+List - array list, stack, linked list, stack, vector, abstrract array list.
+
+Set - enforces uniqueness
+List - does not
+
+sorted set - child of set.
+Hash set
+Tree set
+
+
+Analytics - data is kept in the hash set. Jobs are excuted to move data from the hast set to tree set.
+This is done to eliminate performance degradation.
+
+Queue - gets key values.
+
+
+ArrayList:
+Pros:good to get individual elements on the fly. Array list only save memory when required.
+Cons: 
+
+Threads: 
+add to array list. we make a request to jvmm to perform a job. 
+
+Vector: all methods are synchronized. until the first person uses the place, it is given to the second one.
+vectors are slower but array list are bad candidates ...
+
+Vectors are not good for high number of transactions but protect data. there is no data corruption.
+
+
+Stack - push/pop
+
+Stack, list, vector etc are classes
+
+Queue is an interface.
+
+Sets follow buckets - we can define .
+We have to override  the hascode and equals in the user objects so that we can eliminate duplication in object values.
+
+
+Map:
+name/Value
+not guaranteed in continuous blocks.
+Not iterable...
+
+isolated list - 
+
+
+Context switch - when the time taken for processing is longer than the time slice, jvm moves on to the next thread.
+Pretty much like a 4 way traffic signal ...all ways get to move.
+
+
+wait
+sleep
+suspend
+
+
+If you want to exceute Biz logic as a thread it has to be under runn().
+Single flow of execution.
+
+Thread has a start() method.
+start() is  autility method used to create a parallel method.
+
+
+ready queue - fifo
+sjf - shortest job first. - theory/no postulate - the amount for calculating the time may be longer than exceuting the task....like the heizenberg principle in chemistry.
+snooze - execute doesnt mean execute first...
+
+suspend 	resume
+wait 	notify
+sleep - rest time
+
+
+sleep for stipulated time
+wait - there is a time....
+
+
+suspended threads time out but not age.

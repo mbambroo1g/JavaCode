@@ -1,0 +1,7 @@
+Model talks to db
+end user request goes to controller
+controller links to view and view gives info back to end user.
+model communicates with controller.
+
+
+SPA - single page application- widget based.

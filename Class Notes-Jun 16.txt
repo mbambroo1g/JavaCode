@@ -1,0 +1,43 @@
+Class Notes - Jun 16
+-----------------------
+Threads can cause scenarios like negative balance.
+assertEquals() - if values are equal
+assertTrue() - if value is true
+assertFalse() - if test is false
+-----
+
+JDBC - java database connectivity.
+
+
+Java to db
+
+DML
+Insert, Update, Delete, cfreate etc
+
+DQL
+Select
+
+DML returns - int = no of records affected in teh db
+
+Open Bridge db
+ODBC wwas written by OS guys.10 per minute -> OK
+transactions took over the utility...
+
+--------------
+Try creating a dB.
+
+
+MySQl
+maven - build tool\\\
+it gets the jars itself
+
+======================================
+
+Car extends Threads
+client creates 5 cars
+start() - all threads start...
+Race for 1 mile
+Any mile which reaches the mile will be declared teh winner.
+All should stop then.....
+
+=======================================
